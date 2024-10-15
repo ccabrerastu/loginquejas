@@ -75,7 +75,7 @@ class _QuejasPageState extends State<QuejasPage> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _registrarQueja,
-              child: const Text('Enviar queja'),
+              child: const Text('Enviar quejas'),
             ),
             const SizedBox(height: 20),
             Text(
