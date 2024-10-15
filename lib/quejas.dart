@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart'; // Necesario para formatear la fecha
-
+import 'package:intl/intl.dart'; 
 class QuejasPage extends StatefulWidget {
   final String title;
   const QuejasPage({super.key, required this.title});
@@ -11,13 +10,12 @@ class QuejasPage extends StatefulWidget {
 class _QuejasPageState extends State<QuejasPage> {
   final TextEditingController _asunto = TextEditingController();
   final TextEditingController _detalldequeja = TextEditingController();
-  late TextEditingController _fechaController; // Controlador para la fecha
+  late TextEditingController _fechaController; 
   String _mensajeLogin = '';
 
   @override
   void initState() {
     super.initState();
-    // Inicializa el controlador de fecha con la fecha actual
     String fechaActual = DateFormat('yyyy-MM-dd').format(DateTime.now());
     _fechaController = TextEditingController(text: fechaActual);
   }
@@ -67,12 +65,12 @@ class _QuejasPageState extends State<QuejasPage> {
             ),
             const SizedBox(height: 20),
             TextFormField(
-              controller: _fechaController, // Controlador de la fecha
+              controller: _fechaController, 
               decoration: const InputDecoration(
                 labelText: 'Fecha de Queja',
                 border: OutlineInputBorder(),
               ),
-              readOnly: true, // Solo lectura, no editable
+              readOnly: true, 
             ),
             const SizedBox(height: 20),
             ElevatedButton(
